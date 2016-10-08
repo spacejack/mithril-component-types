@@ -52,6 +52,7 @@ export default class LongPresser extends m.Component<Attrs,LongPresser> {
 	elText: SVGTextElement
 	elFgText: SVGTextElement
 
+	// Unfortunately Typescript cannot (yet) infer class method parameters
 	constructor ({attrs, state}: Mithril.Vnode<Attrs,LongPresser>) {
 		super()
 		// Set up state vars
