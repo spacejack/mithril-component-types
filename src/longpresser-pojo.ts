@@ -50,14 +50,7 @@ interface State {
 }
 
 //
-// LongPresser class component
-//
-// To avoid repetition, we use LongPresser as our State type,
-// otherwise we'd have to declare a State type with all the
-// same properties as this class.
-// Alternately, if you only reference state through 'this'
-// (i.e. never via vnode.state) then you don't need a type
-// def for state at all.
+// LongPresser component
 //
 export default {
 	el: undefined,
