@@ -106,7 +106,7 @@ export default (function LongPresser ({attrs}) {
 				)
 			)
 		}
-	} as Mithril.TComponent<Attrs,{}>
+	}
 
 	// Internally used methods
 
