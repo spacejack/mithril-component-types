@@ -177,4 +177,4 @@ export default (function LongPresser ({attrs}) {
 		removeFadeIn(elFgCircle)
 		removeFadeIn(elFgText)
 	}
-}) as Mithril.TFactoryComponent<Attrs,{}>
+}) as Mithril.FactoryComponent<Attrs,{}>

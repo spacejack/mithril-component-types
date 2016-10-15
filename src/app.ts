@@ -56,4 +56,4 @@ export default {
 			m('p', {style: {marginLeft: '2em'}}, factoryWasPressed ? 'Factory component pressed!' : ''),
 		])
 	}
-} as Mithril.Component
+} as Mithril.Component<{},{}>

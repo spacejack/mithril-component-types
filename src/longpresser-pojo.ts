@@ -211,4 +211,4 @@ export default {
 		removeFadeIn(this.elFgCircle)
 		removeFadeIn(this.elFgText)
 	}
-} as Mithril.TComponent<Attrs,State> & State
+} as Mithril.Component<Attrs,State> & State
