@@ -33,7 +33,7 @@ interface Attrs {
 // (i.e. never via vnode.state) then you don't need a type
 // def for state at all.
 //
-export default class LongPresser extends m.Component<Attrs,LongPresser> {
+export default class LongPresser implements Mithril.ClassComponent<Attrs> {
 	duration: number
 	fgStrokeColor: string
 	bgStrokeColor: string
@@ -53,9 +53,7 @@ export default class LongPresser extends m.Component<Attrs,LongPresser> {
 	elFgText: SVGTextElement
 
 	// Unfortunately Typescript cannot (yet) infer class method parameters
-	constructor ({attrs, state}: Mithril.Vnode<Attrs,LongPresser>) {
-		super()
-		// Set up state vars
+	constructor ({attrs}: Mithril.CVnode<Attrs>) {
 		this.duration = (+attrs.duration > 0) ? (+attrs.duration) * 1000 : DEFAULT_DURATION
 		this.fgStrokeColor = attrs.fgStrokeColor
 		this.bgStrokeColor = attrs.bgStrokeColor
@@ -65,7 +63,7 @@ export default class LongPresser extends m.Component<Attrs,LongPresser> {
 		this.prevT = Date.now()
 	}
 
-	oncreate ({dom}: Mithril.Vnode<Attrs,LongPresser>) {
+	oncreate ({dom}: Mithril.CVnodeDOM<Attrs>) {
 		// Grab some elements we'll use a lot
 		this.el = dom as HTMLElement
 		this.elSvg = this.el.childNodes[0] as SVGSVGElement
@@ -110,7 +108,7 @@ export default class LongPresser extends m.Component<Attrs,LongPresser> {
 		})
 	}
 
-	view ({attrs}: Mithril.Vnode<Attrs,LongPresser>) {
+	view ({attrs}: Mithril.CVnode<Attrs>) {
 		console.log('LongPresser view called')
 		return m('div', {class: 'longpresser', style: {cursor: this.isFinished ? 'default' : 'pointer'}, onpressed: attrs.onpressed},
 			m('svg', {viewBox: `0 0 ${RADIUS*2} ${RADIUS*2}`, version: '1.1', xmlns: 'http://www.w3.org/2000/svg'},

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "lib": ["es2015", "dom"],
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
@@ -13,9 +14,10 @@
     "strictNullChecks": true,
     "noImplicitThis": true
   },
-  "filesGlob": [
-    "**/*.ts", "typings/**/*.d.ts"
-  ],
+  "files": ["main.ts"],
+  "include": ["typings/**/*.d.ts"],
+  "compileOnSave": false,
+  "buildOnSave": false,
   "atom": {
     "rewriteTsconfig": false
   }

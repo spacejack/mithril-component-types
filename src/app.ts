@@ -13,7 +13,7 @@ export default {
 	view (vnode) {
 		return m('div', [
 			m('.pressme',
-				// With a POJO component the attrs type is inferred & checked
+				// attrs type is inferred
 				m(LongPresserPojo, {
 					text: "Press Me",
 					textColor: '#FFF',
@@ -26,7 +26,7 @@ export default {
 			),
 
 			m('.pressme',
-				// With a class component the type for attrs cannot be inferred.
+				// attrs type is inferred
 				m(LongPresserClass, {
 					text: "Press Me",
 					textColor: '#FFF',
@@ -39,7 +39,7 @@ export default {
 			),
 
 			m('.pressme',
-				// With a factory component the attrs type is inferred & checked
+				// attrs type is inferred
 				m(LongPresserFactory, {
 					text: "Press Me",
 					textColor: '#FFF',

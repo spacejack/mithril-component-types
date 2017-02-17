@@ -10,7 +10,7 @@ Install:
 
 Compile with source maps, serve, recompile on save:
 
-	npm run develop
+	npm start
 
 Then go to `http://localhost:3000/` in your browser.
 
