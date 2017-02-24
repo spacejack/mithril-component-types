@@ -1,4 +1,4 @@
-declare const m: Mithril.Static
+import * as m from 'mithril'
 import {polarToCartesian, svgArcPath, drawArc, accel, fadeIn, removeFadeIn} from './util'
 
 const DEFAULT_DURATION = 1 * 1000
@@ -54,7 +54,7 @@ export default class LongPresser implements Mithril.ClassComponent<Attrs> {
 
 	// Unfortunately Typescript cannot (yet) infer class method parameters
 	constructor ({attrs}: Mithril.CVnode<Attrs>) {
-		this.duration = (+attrs.duration > 0) ? (+attrs.duration) * 1000 : DEFAULT_DURATION
+		this.duration = attrs.duration != null ? attrs.duration * 1000 : DEFAULT_DURATION
 		this.fgStrokeColor = attrs.fgStrokeColor
 		this.bgStrokeColor = attrs.bgStrokeColor
 		this.isPressed = false

@@ -1,4 +1,4 @@
-declare const m: Mithril.Static
+import * as m from 'mithril'
 
 import LongPresserPojo from './longpresser-pojo'
 import LongPresserClass from './longpresser-class'

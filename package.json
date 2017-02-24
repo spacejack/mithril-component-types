@@ -12,12 +12,15 @@
   },
   "author": "spacejack",
   "license": "MIT",
+  "dependencies": {
+    "mithril": "github:lhorie/mithril.js#3786373b587a7374e9df961d83a26baad06ef0d5"
+  },
   "devDependencies": {
     "browserify": "^14.1.0",
     "http-server": "^0.9.0",
     "npm-run-all": "^4.0.1",
     "tsify": "^3.0.1",
-    "typescript": "^2.1.6",
+    "typescript": "^2.2.1",
     "uglify-js": "^2.7.5",
     "watchify": "^3.9.0"
   }

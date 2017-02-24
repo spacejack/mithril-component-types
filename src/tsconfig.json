@@ -15,7 +15,7 @@
     "noImplicitThis": true
   },
   "files": ["main.ts"],
-  "include": ["typings/**/*.d.ts"],
+  //"include": ["typings/**/*.d.ts"],
   "compileOnSave": false,
   "buildOnSave": false,
   "atom": {

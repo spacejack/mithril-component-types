@@ -1,4 +1,4 @@
-declare const m: Mithril.Static
+import * as m from 'mithril'
 import {polarToCartesian, svgArcPath, drawArc, accel, fadeIn, removeFadeIn} from './util'
 
 const DEFAULT_DURATION = 1 * 1000
@@ -33,7 +33,7 @@ interface Attrs {
 // state is in the closure rather than on vnode.state.
 //
 export default (function LongPresser ({attrs}) {
-	const duration: number = (+attrs.duration > 0) ? (+attrs.duration) * 1000 : DEFAULT_DURATION
+	const duration: number = attrs.duration != null ? attrs.duration * 1000 : DEFAULT_DURATION
 	const fgStrokeColor: string = attrs.fgStrokeColor
 	const bgStrokeColor: string = attrs.bgStrokeColor
 	let isPressed = false

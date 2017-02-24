@@ -1,4 +1,4 @@
-declare const m: Mithril.Static
+import * as m from 'mithril'
 
 import app from './app'
 
